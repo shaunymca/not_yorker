@@ -1,0 +1,20 @@
+# ReadMe
+
+This is a twitter bot that takes a database of images and joke urls and outputs new jokes with randomly selected images.
+
+This powers [Not Yorker](http://twitter.com/notyorker), a twitter bot that remixes New Yorker captions with their cartoons.
+
+## Running
+You'll need a data base with a table named 'comics' with the following fields.
+```
+joke_id | | caption
+```
+ Please note that the is a specific webpage in the downloadImage.js script, not a hotlink to a picture. This script uses phantomjs, so if you are not scraping from the same location I am and the number scheme does not match as that webpage does, you'll need to edit the phantom script to accommodate for the image location on the page you are scraping.
+
+ As a side note, I found phantomjs very pleasant to work with.
+
+## Deploying
+I have set this up for deployment on heroku, using their free simpledb MySQL database. You'll need your own twitter credentials as environment variables. The script runs once on deployment and then exits. I'm using heroku's free scheduler to run it again throughout the day.
+
+## Contributing
+If you really want to make this bot better (although, c'mon, it's pretty great already), you can fork and submit pull requests. I would love the help in making it better.
