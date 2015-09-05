@@ -19,12 +19,13 @@ var twitterClient = new Twitter({
 var wordlist = "";
 var captionsList = [];
 
-var connection = mysql.createConnection({
-  host     : process.env.CLEARDB_DATABASE_URL,
-  user     : process.env.DB_USER,
-  password : process.env.DB_PASS,
-  database : 'jokes'
-});
+//var connection = mysql.createConnection({
+//  host     : process.env.CLEARDB_DATABASE_URL,
+//  user     : process.env.DB_USER,
+//  password : process.env.DB_PASS,
+//  database : 'jokes'
+//});
+var connection = mysql.createConnection(process.env.CLEARDB_DATABASE_URL);
 //var connection = mysql.createConnection(CLEARDB_DATABASE_URL);
 connection.connect();
 
