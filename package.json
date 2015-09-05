@@ -11,5 +11,6 @@
     "q": "^1.4.1",
     "twitter": "^1.2.5",
     "url": "^0.11.0"
-  }
+  },
+  "start": "node server.js"
 }
